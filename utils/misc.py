@@ -1,4 +1,4 @@
-import cv2.cv2
+import cv2
 import torch
 import numpy as np
 import os

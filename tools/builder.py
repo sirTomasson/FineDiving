@@ -68,7 +68,7 @@ def resume_train(base_model, psnet_model, decoder, regressor_delta, optimizer, a
     print('Loading weights from %s...' % ckpt_path)
 
     # load state dict
-    state_dict = torch.load(ckpt_path, map_location='cpu')
+    state_dict = torch.load(ckpt_path, map_location='cpu', weights_only=False)
 
     # parameter resume of base model
     base_ckpt = {k.replace("module.", ""): v for k, v in state_dict['base_model'].items()}
@@ -103,7 +103,7 @@ def load_model(base_model, psnet_model, decoder, regressor_delta, args):
     print('Loading weights from %s...' % ckpt_path)
 
     # load state dict
-    state_dict = torch.load(ckpt_path,map_location='cpu')
+    state_dict = torch.load(ckpt_path,map_location='cpu', weights_only=False)
 
     # parameter resume of base model
     base_ckpt = {k.replace("module.", ""): v for k, v in state_dict['base_model'].items()}

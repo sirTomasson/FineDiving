@@ -69,7 +69,7 @@ class FineDiving_Pair_Dataset(torch.utils.data.Dataset):
 
         start_frame = int(image_list[0].split("/")[-1][:-4])
         end_frame = int(image_list[-1].split("/")[-1][:-4])
-        frame_list = np.linspace(start_frame, end_frame, self.length).astype(np.int)
+        frame_list = np.linspace(start_frame, end_frame, self.length).astype(np.int32)
         image_frame_idx = [frame_list[i] - start_frame for i in range(self.length)]
 
         video = [Image.open(image_list[image_frame_idx[i]]) for i in range(self.length)]

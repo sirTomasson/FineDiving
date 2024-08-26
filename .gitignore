@@ -1,0 +1,4 @@
+*.out
+Annotations/*.pkl
+FINADiving_jpgs/
+FINADiving_MTL_256s/

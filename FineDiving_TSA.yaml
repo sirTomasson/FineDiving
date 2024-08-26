@@ -1,17 +1,17 @@
 # basic
 bs_train : 8
 bs_test : 1
-workers : 2
-max_epoch : 200
+workers : 4
+max_epoch : 50
 
 # model
-pretrained_i3d_weight : 'models/model_rgb.pth'
+pretrained_i3d_weight : '~/Projects/kinetics_i3d_pytorch/model/model_rgb.pth'
 
 # dataset
-data_root : '/opt/datasets/FINADiving_MTL_256s'
+data_root : 'FINADiving_MTL_256s'
 label_path : 'Annotations/fine-grained_annotation_aqa.pkl'
-train_split : 'Annotations/train_split.pkl'
-test_split : 'Annotations/test_split.pkl'
+train_split : 'Annotations/train_split_filtered_missing.pkl'
+test_split : 'Annotations/test_split_filtered_missing.pkl'
 
 # optimizer
 optimizer: 'Adam'
